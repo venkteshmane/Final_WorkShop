@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+    rel="stylesheet" />
   <link rel="shortcut icon" href="logo.jpeg">
   <link rel="stylesheet" href="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\addressBookForm.css">
   <title>Address Book Form</title>
 </head>
 
 <body>
-    <!-------- UC1 ------->
+  <!------------ UC1 --------------->
   <header class="header-content header">
     <div class="logo-content">
       <img src="logo.jpeg" alt="logo" />
@@ -24,43 +26,42 @@
     </div>
   </header>
 
-  <!-------- UC2 ------->
+  <!-------------------- UC2 --------------->
   <div class="form-content">
     <form action="#" class="form" onreset="resetForm()" onsubmit="save()">
       <div class="form-head">
         <div class="form-head-text">Person Address Form</div>
-            <a href="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\addresBookForm.html"><img class="form-head-image" src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\cancelButton.jpeg"
-              alt="logo"></a>
-        </div>
-    </form>
-  </div>
-
-  <!---------- UC 3 -------->
-  <div class="form-constrains">
-    <div class="row-content">
-      <label for="name" class="label text">Full Name</label>
-      <br>
-      <input type="text" class="input" id="name" name="name" placeholder="Your name..." autocomplete="off" required>
-      <error-output class="name-error"></error-output>
-    </div>
-    <div class="row-content">
-      <label for="phoneNumber" class="label text">Phone Number</label>
-      <br>
-      <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Your phone number.." autocomplete="off" required>
-      <error-output class="tel-error"></error-output>
-    </div>
-    <div class="row-content">
-      <label for="address" class="label text">Address</label>
-      <br>
-      <textarea name="address" id="address" placeholder="Your address.." autocomplete="off" required></textarea>
-    </div>
-    <div class="row-content">
-      <div class="column-constrains">
-        <div class="column-content">
-          <label for="city" class="label text">City</label>
+        <a href="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\addressBookHome.html"><img class="form-head-image" src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\cancelButton.jpeg"
+            alt="logo"></a>
+      </div>
+      <!-------------------- UC3 --------------->
+      <div class="form-constrains">
+        <div class="row-content">
+          <label for="name" class="label text">Full Name</label>
           <br>
-          <select name="city" id="city" required>
-            <option selected disabled hidden value="Select City">Select City</option>
+          <input type="text" class="input" id="name" name="name" placeholder="Your name.." autocomplete="off" required>
+          <error-output class="name-error"></error-output>
+        </div>
+        <div class="row-content">
+          <label for="phoneNumber" class="label text">Phone Number</label>
+          <br>
+          <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Your phone number.."
+            autocomplete="off" required>
+          <error-output class="tel-error"></error-output>
+        </div>
+        <div class="row-content">
+          <label for="address" class="label text">Address</label>
+          <br>
+          <textarea name="address" id="address" placeholder="Your address.." autocomplete="off" required></textarea>
+          <error-output class="address-error"></error-output>
+        </div>
+        <div class="row-content">
+          <div class="column-constrains">
+            <div class="column-content">
+              <label for="city" class="label text">City</label>
+              <br>
+              <select name="city" id="city" required>
+                <option selected disabled hidden value="Select City">Select City</option>
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Bangalore">Bangalore</option>
                 <option value="Chennai">Chennai</option>
@@ -73,12 +74,12 @@
                 <option value="Pune">Pune</option>
                 <option value="Surat">Surat</option>
               </select>
-        </div>
-        <div class="column-content">
-          <label for="state" class="label text">State</label>
-          <br>
-          <select name="state" id="state">
-            <option selected disabled hidden value="Select State">Select State</option>
+            </div>
+            <div class="column-content">
+              <label for="state" class="label text">State</label>
+              <br>
+              <select name="state" id="state">
+                <option selected disabled hidden value="Select State">Select State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -115,24 +116,29 @@
                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                 <option value="Uttarakhand">Uttarakhand</option>
                 <option value="West Bengal">West Bengal</option>
-          </select>
+              </select>
+            </div>
+            <div class="column-content">
+              <label for="zip" class="label text">Zip code</label>
+              <br>
+              <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
+              <error-output class="zip-error"></error-output>
+            </div>
+          </div>
         </div>
-        <div class="column-content">
-          <label for="zip" class="label text">Zip code</label>
-          <br>
-          <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
-          <error-output class="zip-error"></error-output>
+
+        <!-------------------- UC5 --------------->
+        <div class="buttons-contact">
+          <button type="submit" class="button button-submit" id="submitButton">Submit</button>
+          <button type="reset" class="button button-reset" id="resetButton">Reset</button>
         </div>
       </div>
-  <!--------------UC5---------------->
-      <div class="buttons-contact">
-        <button type="submit" class="button button-submit" id="submitButton">Submit</button>
-        <button type="reset" class="button button-reset" id="resetButton">Reset</button>
-      </div>
-    </div>
+    </form>
   </div>
-<!----------------UC4----------------->
-<script src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\addressBookForm.js"></script>
-<script src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\contact_data.js"></script>
+
+  <!-------------------- UC4 --------------->
+  <script src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\addressBookForm.js"></script>
+  <script src="C:\Users\user\Desktop\LFP_Batch\Final_Workshop\contact_data.js"></script>
 </body>
+
 </html>
