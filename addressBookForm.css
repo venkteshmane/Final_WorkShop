@@ -40,3 +40,31 @@
   .addressBook-book {
     color: #42515f;
   }
+
+  /* -----UC------ */
+  .form{
+    background: #ffffff 0% 0% no-repeat padding-box;
+    min-width: 1067px;
+    margin: 2%;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    opacity: 1;
+  }
+  .form-head {
+    display: flex;
+    background: #008cff 0% 0% no-repeat padding-box;
+    border-radius: 20px 20px 20px 20px;
+    opacity: 1;
+    padding: 25px;
+  }
+  .form-head-text {
+    flex: 6;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+  }
