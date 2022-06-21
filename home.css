@@ -44,6 +44,7 @@ body {
 }
 
 /* ------------UC11------------ */
+
 .main-content {
     min-height: calc(100% - 80%);
     background-color: #f7f7f7;
