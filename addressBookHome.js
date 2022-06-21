@@ -34,7 +34,7 @@ const createInnerHtml = () => {
         <td>${contact._zip}</td>
         <td>${contact._phoneNumber}</td>
         <td>
-            <img src="C:\\Users\\user\\Desktop\\LFP_Batch\\Final_Workshop\\delete.svg" alt="delete" id="${contact._id}" onclick="remove(this)">
+            <img src="C:\\Users\\user\\Desktop\\LFP_Batch\\Final_Workshop\\delete.svg" id="${contact._id}" onclick="remove(this)">
             <img src="C:\\Users\\user\\Desktop\\LFP_Batch\\Final_Workshop\\edit.svg" alt="update" id="${contact._id}" onclick="update(this)">
         </td>
         </tr>`;
@@ -52,5 +52,14 @@ const remove = (node) => {
   localStorage.setItem("ContactList", JSON.stringify(contactList));
   document.querySelector(".contact-count").textContent = contactList.length;
   createInnerHtml();
-  window.location.replace("C:\\Users\\user\\Desktop\\LFP_Batch\\Final_Workshop\\addressBookHome.html");
+  window.location.replace(site_properties.home_page);
+}
+
+const update = (node) => {
+  let contactToEdit = contactList.find(editContact => editContact._id == node.id);
+  if (!contactToEdit) {
+    return;
+  }
+  localStorage.setItem('contactEdit', JSON.stringify(contactToEdit));
+  window.location.replace(site_properties.add_contacts_page);
 }
