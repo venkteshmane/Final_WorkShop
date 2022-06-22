@@ -189,12 +189,12 @@ error-output {
   box-shadow: 0px 8px 15px rgba(77, 74, 74, 0.3);
 }
 .button-submit:hover{
-  background-color: #008cff;
+  background-color: #74ad6e;
   color: black;
 }
 
 .button-reset:hover{
-  background-color: rgb(223, 0, 0);
+  background-color: rgb(156, 95, 95);
   color: black;
 }
 
